@@ -1,0 +1,349 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif; 
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    background-color: #120909; 
+    color: aliceblue; 
+    padding: 20px 0; 
+}
+
+.navigation ul {
+    display: flex; 
+    list-style-type: none; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.navigation li {
+    margin: 0 15px; 
+    font-size: 14px;
+}
+
+.logo-container {
+    margin: 0 15px; 
+}
+
+.logo img {
+    height: 50px; 
+    width: auto; 
+}
+
+.navigation a {
+    color: aliceblue; 
+    text-decoration: none; 
+}
+
+.navigation a:hover {
+    text-decoration: none;
+    color: rgb(147, 123, 95); 
+    transition: color 0.3s ease ,transform 0.3s ease;
+}
+section .video {
+    position: absolute;
+    top: 93px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+.btn-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    border: 1px solid #8c8551;
+    cursor: pointer;
+    background-color:#8c8551;
+    text-decoration: none;
+    overflow: hidden;
+    font-family: inherit;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 150px;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+.btn::before,
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn::before {
+    left: 50%;
+    width: 0;
+    transform: translateX(-50%);
+    background-color: #120909;
+}
+
+.btn::after {
+    right: 50%;
+    width: 0;
+    transform: translateX(50%);
+    background-color: black;
+}
+
+.btn:hover{
+    color: white;
+}
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+section{
+    height: 500px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+/* New Section Styles */
+.section2 {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 40px 20px;
+    background-color: none;
+}
+
+.left-part {
+    flex: 1; /* Take equal space */
+    text-align: right; /* Center text */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column; /* Align items vertically */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.right-part {
+    flex: 1; /* Take equal space */
+    text-align: left; /* Align text to the left */
+    padding: 0 20px 0 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.section2 h3 {
+    font-size: 20px;
+    color: #120909; /* Dark color for heading */
+    text-transform: uppercase;
+
+}
+
+.section2 h1 {
+    font-size: 50px;
+    color: #8c8551; /* Different color for emphasis */
+    margin: 45px 0; /* Margin for spacing */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section2 p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 20px 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.log img {
+    margin-top: 20px; /* Space between text and image */
+    margin-left: 30px;
+    width: 50px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.fst-btn .btn {
+    background-color: transparent; /* Transparent background */
+    color: #8c8551; /* Text color matching border */
+    border: 1px solid #8c8551; /* Yellow border */
+    padding: 0.9rem 1.8rem;
+    font-size: 13px;
+    font-weight: 100;
+    text-decoration: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 2px;
+    margin-left: 40px;
+}
+
+.fst-btn .btn::before,
+.fst-btn .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #8c8551; /* Yellow hover effect */
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.fst-btn .btn::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fst-btn .btn::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.fst-btn .btn:hover {
+    color: white; /* Text color changes to white on hover */
+}
+
+.fst-btn .btn:hover::before,
+.fst-btn .btn:hover::after {
+    width: 100%; /* Expands the yellow background on hover */
+}
+
+
+/* Parallelogram Section */
+.parallelogram-section {
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    position: relative; /* Maintain positioning context */
+}
+
+.parallelogram {
+    width: 100%;
+    height: 750px;
+    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%); /* Adjusted for the correct angle */
+    position: relative;
+}
+
+.parallelogram img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+}
+.btn1 {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff; /* Background color */
+    text-decoration: none;
+    overflow: hidden;
+    font-family: inherit;
+    position: relative;
+    transition: color 0.3s ease; /* Only transition color */
+    width: 150px; /* Fixed button width */
+    z-index: 1;
+    letter-spacing: 2px;
+    vertical-align: middle;
+    margin-top: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Pseudo-elements for hover effect */
+.btn1::before,
+.btn1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease; /* Transition only width */
+    z-index: -1;
+}
+
+.btn1::before {
+    left: 50%;
+    width: 0;
+    transform: translateX(-50%);
+    background-color: #120909; /* Left background color */
+}
+
+.btn1::after {
+    right: 50%;
+    width: 0;
+    transform: translateX(50%);
+    background-color: black; /* Right background color */
+}
+
+.btn1:hover {
+    color: white; /* Change text color on hover */
+}
+
+.btn1:hover::before {
+    width: 100%; /* Expand left background on hover */
+}
+
+.btn1:hover::after {
+    width: 100%; /* Expand right background on hover */
+}
+
+/* Style for the overlay */
+.overlay {
+    position: absolute; /* Positioning relative to the parallelogram */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Adjust vertical position as needed */
+    transform: translate(-50%, -50%); /* Center the overlay */
+    z-index: 10; /* Ensure it's above the image */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    border-radius: 50%; /* Create a circular shape */
+    width: 400px; /* Diameter of the circle */
+    height: 400px; /* Diameter of the circle */
+    display: flex; /* Center text inside the overlay */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.overlay p {
+    margin: 0 4px 10px; /* Adjusted margin for spacing */
+    padding: 0;
+    font-weight: normal;
+    line-height: 1.5rem;
+    color: rgb(255, 250, 250);
+    text-align: center; /* Center-align text */
+    font-size: 15px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Center the button under the paragraph */
+.pool-btn {
+    display: flex; /* Use flexbox to center */
+    justify-content: center; /* Center the button horizontally */
+    text-align: center; /* Center align the text */
+}
