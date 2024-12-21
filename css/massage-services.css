@@ -1,0 +1,630 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family:Arial, sans-serif; 
+    scroll-behavior: smooth;
+}
+
+
+.header {
+    background-color: #120909; 
+    color: aliceblue; 
+    padding: 20px 0; 
+}
+
+.navigation ul {
+    display: flex; 
+    list-style-type: none; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.navigation li {
+    margin: 0 15px; 
+    font-size: 14px;
+}
+
+.logo-container {
+    margin: 0 15px; 
+}
+
+.logo img {
+    height: 50px; 
+    width: auto; 
+}
+
+.navigation a {
+    color: aliceblue; 
+    text-decoration: none; 
+}
+
+.navigation a:hover {
+    text-decoration: none;
+    color: rgb(147, 123, 95); 
+    transition: color 0.3s ease ,transform 0.3s ease;
+}
+section .video {
+    position: absolute;
+    top: 93px;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 50% 100%, 0 75%);
+}
+.btn-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+.text-infront {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Optional */
+    z-index: 1000;
+}
+.text-infront p {
+    font-size: 14px;
+    margin: 0 0 14px;
+    padding: 7px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.text-infront h1{
+    font-size: 56px;
+    margin: 14px 0px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Button Styling */
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    border: 1px solid #8c8551;
+    cursor: pointer;
+    background-color:#8c8551;
+    text-decoration: none;
+    overflow: hidden;
+    font-family: inherit;
+    position: relative;
+    transition: all 0.3s ease;
+    width: 150px;
+    z-index: 1;
+    letter-spacing: 2px;
+}
+
+.btn::before,
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.btn::before {
+    left: 50%;
+    width: 0;
+    transform: translateX(-50%);
+    background-color: #120909;
+}
+
+.btn::after {
+    right: 50%;
+    width: 0;
+    transform: translateX(50%);
+    background-color: black;
+}
+
+.btn:hover{
+    color: white;
+}
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn:hover::after {
+    width: 100%;
+}
+
+section{
+    height: 500px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+/* New Section Styles */
+.section2 {
+    display: flex; /* Enable Flexbox */
+    justify-content: flex-start; /* Center horizontally */
+    align-items: center; /* Align content to the top */
+    height: 3100px; /* Full viewport height */
+    text-align: center; /* Center-align text */
+    padding :20px; /* Add a small gap from the top */
+    box-sizing: border-box;/* Center-align text */
+    flex-direction: column;
+}
+
+
+
+.section2 h2 {
+    font-size:35px;
+    color:#8c8551; /* Dark color for heading */
+    text-transform: none; /* Convert text to uppercase */
+    margin: 45px 0; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom:10px;
+}
+
+
+.horizontal-line{
+    width: 50%;
+    border:none;
+    border-top: 4px dotted #8c8551;
+    margin-top: 40px;
+}
+.section2 p{
+    color: #535763;
+    text-align: left;
+    margin-top: 40px;
+    line-height: 1.5;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.log img {
+    margin-top: 20px; /* Space between text and image */
+    margin-left: 30px;
+    width: 50px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.fst-btn .btn {
+    background-color: transparent; /* Transparent background */
+    color: #8c8551; /* Text color matching border */
+    border: 1px solid #8c8551; /* Yellow border */
+    padding: 0.9rem 1.8rem;
+    font-size: 13px;
+    font-weight: 100;
+    text-decoration: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 2px;
+    margin-left: 40px;
+}
+
+.fst-btn .btn::before,
+.fst-btn .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #8c8551; /* Yellow hover effect */
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.fst-btn .btn::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fst-btn .btn::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.fst-btn .btn:hover {
+    color: white; /* Text color changes to white on hover */
+}
+
+.fst-btn .btn:hover::before,
+.fst-btn .btn:hover::after {
+    width: 100%; /* Expands the yellow background on hover */
+}
+
+
+/* Parallelogram Section */
+.parallelogram-section {
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    position: relative; /* Maintain positioning context */
+}
+
+.parallelogram {
+    width: 100%;
+    height: 750px;
+    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%); /* Adjusted for the correct angle */
+    position: relative;
+}
+
+.parallelogram img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+}
+.btn1 {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 13px;
+    font-weight: 100;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff; /* Background color */
+    text-decoration: none;
+    overflow: hidden;
+    font-family: inherit;
+    position: relative;
+    transition: color 0.3s ease; /* Only transition color */
+    width: 150px; /* Fixed button width */
+    z-index: 1;
+    letter-spacing: 2px;
+    vertical-align: middle;
+    margin-top: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Pseudo-elements for hover effect */
+.btn1::before,
+.btn1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    transition: width 0.3s ease; /* Transition only width */
+    z-index: -1;
+}
+
+.btn1::before {
+    left: 50%;
+    width: 0;
+    transform: translateX(-50%);
+    background-color: #120909; /* Left background color */
+}
+
+.btn1::after {
+    right: 50%;
+    width: 0;
+    transform: translateX(50%);
+    background-color: black; /* Right background color */
+}
+
+.btn1:hover {
+    color: white; /* Change text color on hover */
+}
+
+.btn1:hover::before {
+    width: 100%; /* Expand left background on hover */
+}
+
+.btn1:hover::after {
+    width: 100%; /* Expand right background on hover */
+}
+
+/* Style for the overlay */
+.overlay {
+    position: absolute; /* Positioning relative to the parallelogram */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Adjust vertical position as needed */
+    transform: translate(-50%, -50%); /* Center the overlay */
+    z-index: 10; /* Ensure it's above the image */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    border-radius: 50%; /* Create a circular shape */
+    width: 400px; /* Diameter of the circle */
+    height: 400px; /* Diameter of the circle */
+    display: flex; /* Center text inside the overlay */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.overlay p {
+    margin: 0 4px 10px; /* Adjusted margin for spacing */
+    padding: 0;
+    font-weight: normal;
+    line-height: 1.5rem;
+    color: rgb(255, 250, 250);
+    text-align: center; /* Center-align text */
+    font-size: 15px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Center the button under the paragraph */
+.pool-btn {
+    display: flex; /* Use flexbox to center */
+    justify-content: center; /* Center the button horizontally */
+    text-align: center; /* Center align the text */
+}
+/*section3*/
+.section3 {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 60px 20px;
+    background-color: none;
+    margin-top: 330px;
+}
+
+.l-part {
+    flex: 1; /* Take equal space */
+    text-align: left; /* Center text */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; /* Align items vertically */
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.r-part {
+    flex: 1; /* Take equal space */
+    text-align: left; /* Align text to the left */
+    padding: 0 20px 0 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.section3 h3 {
+    font-size: 20px;
+    color: #120909; /* Dark color for heading */
+    text-transform: uppercase;
+    margin-bottom: 70px;
+}
+
+.section3 h1 {
+    font-size: 50px;
+    color: #8c8551; /* Different color for emphasis */
+    margin:  0px 0 110px; /* Margin for spacing */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section3 p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 20px 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.log img {
+    margin-top: 20px; /* Space between text and image */
+    margin-left: 30px;
+    width: 50px; /* Adjust width as necessary */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.snd-btn .btn {
+    background-color: transparent; /* Transparent background */
+    color: #8c8551; /* Text color matching border */
+    border: 1px solid #8c8551; /* Yellow border */
+    padding: 0.9rem 1.8rem;
+    font-size: 13px;
+    font-weight: 100;
+    text-decoration: none;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 2px;
+    margin-left: 40px;
+    width: 250px;
+}
+
+.snd-btn .btn::before,
+.snd-btn .btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #8c8551; /* Yellow hover effect */
+    z-index: -1;
+    transition: width 0.3s ease;
+}
+
+.snd-btn .btn::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.snd-btn .btn::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.snd-btn .btn:hover {
+    color: white; /* Text color changes to white on hover */
+}
+
+.snd-btn .btn:hover::before,
+.snd-btn .btn:hover::after {
+    width: 100%; /* Expands the yellow background on hover */
+}
+.circle {
+    position: absolute; /* Positioning relative to the parallelogram */
+    left: 70%; /* Center horizontally */
+    top: 50%; /* Adjust vertical position as needed */
+    transform: translate(-50%, -50%); /* Center the overlay */
+    z-index: 10; /* Ensure it's above the image */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    border-radius: 50%; /* Create a circular shape */
+    width: 400px; /* Diameter of the circle */
+    height: 400px; /* Diameter of the circle */
+    display: flex; /* Center content inside the overlay */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
+    border: 5px solid white; /* Circle border */
+}
+
+.circle img {
+    width: 100%; /* Set width to 100% to fill the circle */
+    height: 100%; /* Set height to 100% to fill the circle */
+    object-fit: cover; /* Ensure the image covers the entire area */
+    border-radius: 50%; /* Optional: add a border radius to keep it circular */
+}
+
+.text-section {
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    flex-direction: column; /* Stack items vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 40px 20px; /* Padding around the text */
+    text-align: center; /* Center align text */
+    margin-top: 300px;
+}
+
+.text h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #8c8551;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text p {
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
+
+.text input[type="email"] {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #8bc7f3; /* Optional: border for inputs */
+    border-radius: 4px; /* Optional: rounded corners for inputs */
+    width: 90%;
+}
+.text input[type="submit"] {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* Optional: border for inputs */
+    border-radius: 4px; /* Optional: rounded corners for inputs */
+    width: 90%;
+    background-color: #8c8551;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.social-banner {
+    position: relative;
+    background-image: url('images/hot-pools-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.social-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Black overlay with 60% opacity */
+    z-index: 1;
+}
+
+.top-text {
+    position: absolute;
+    top: 10%; /* Position closer to the top */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensures it appears above the overlay */
+}
+
+.top-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 120px;
+    font-size: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top-text i {
+    font-size: 25px;
+    color: white;
+    margin: 0 10px;
+    margin-top: 50px;
+}
+
+
+
+  
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative; /* Keep position relative to allow absolute positioning of content */
+}
+
+.dropdown-content {
+    display: none; /* Hide initially */
+    position: absolute; /* Position absolutely within .dropdown */
+    top: 60px; /* Position under the image/logo */
+    left: 50%; /* Center dropdown under link */
+    transform: translateX(-50%); /* Center align horizontally */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
+    padding: 15px 20px; /* Add padding */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Dropdown shadow */
+    border-radius: 8px; /* Rounded corners */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.dropdown-content a {
+    color: #ffffff; /* Text color (white for better contrast) */
+    text-decoration: none;
+    display: block; /* Block display for each link */
+    padding: 10px 15px; /* Padding for individual links */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 200px;
+}
+
+.dropdown-content a:hover {
+ /* Light hover effect */
+    color:rgb(147, 123, 95); /* Text color on hover */
+}
+
+.dropdown-content.active {
+    display: block;
+}
